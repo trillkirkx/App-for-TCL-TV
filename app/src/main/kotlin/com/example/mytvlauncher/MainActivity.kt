@@ -260,7 +260,7 @@ class MainActivity : Activity() {
         row.removeAllViews()
         try {
             val m = tim
-            m?.inputList?.forEach { info ->
+            m?.tvInputList?.forEach { info ->
                 if (info.type == TvInputInfo.TYPE_HDMI && m.getInputState(info.id) == TvInputManager.INPUT_STATE_CONNECTED) {
                     val label = info.loadLabel(this)?.toString() ?: "HDMI"
                     row.addView(tile(label, null, "HDMI", {
